@@ -6,6 +6,8 @@ import java.util.Arrays;
  * 每次从序列中读取一个元素，放到已经排序好的序列中，
  * 直到序列读取完毕。
  * 最好情况运行时间θ(n),最坏情况运行时间都是Θ(n^2)
+ * 运行时间与输入数组中的逆序对数量成常数倍关系,即O(1)
+ * @see com.yeebee.zhc.algorithms.problem.P2_4Inversions
  * @author yeebee
  */
 
