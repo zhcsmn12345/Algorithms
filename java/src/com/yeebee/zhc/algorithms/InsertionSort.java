@@ -2,17 +2,19 @@ package com.yeebee.zhc.algorithms;
 
 import java.util.Arrays;
 /**
- * 
+ * 插入排序
+ * 每次从序列中读取一个元素，放到已经排序好的序列中，
+ * 直到序列读取完毕。
+ * 最好情况运行时间θ(n),最坏情况运行时间都是Θ(n^2)
  * @author yeebee
- *插入排序
  */
 
 public class InsertionSort {
 	
 	/**
-	 * 升序
-	 * @param a
-	 * @return
+	 * 升序排序
+	 * @param a 需要排序的数组
+	 * @return  按升序排列好的数组
 	 */
 	public static int[] sort(int a[]) {
 		if(a.length<2)
@@ -23,7 +25,7 @@ public class InsertionSort {
 			int i=j-1;
 			while(i>=0&&a[i]>key) {
 				a[i+1]=a[i];
-				i=i-1;
+				i--;
 			}
 			a[i+1]=key;
 		}
@@ -31,9 +33,9 @@ public class InsertionSort {
 	}
 	
 	/**
-	 * 降序
-	 * @param a
-	 * @return
+	 * 降序排序
+	 * @param a 需要排序的数组
+	 * @return  按升序排序好的数组
 	 */
 	public static int[] sortDesc(int a[]) {
 		if(a.length<2)
@@ -44,7 +46,7 @@ public class InsertionSort {
 			int i=j-1;
 			while(i>=0&&a[i]<key) {
 				a[i+1]=a[i];
-				i=i-1;
+				i--;
 			}
 			a[i+1]=key;
 		}
@@ -61,7 +63,6 @@ public class InsertionSort {
 		System.out.println(Arrays.toString(a));
 		InsertionSort.sort(a1);
 		System.out.println(Arrays.toString(a1));
-		
 	}
 
 }
