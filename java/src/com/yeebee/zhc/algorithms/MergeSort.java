@@ -48,10 +48,10 @@ public class MergeSort {
 	/**
 	 * 合并算法，不使用哨兵
 	 * 一旦一个数组的元素均被复制回A之后就停止，把另一个数组的剩余部分复制回数组A
-	 * @param A
-	 * @param p
-	 * @param q
-	 * @param r
+	 * @param A 输入序列，其中A[p..q]和A[q+1..r]都已排序好
+	 * @param p 第一个子数组起始位置
+	 * @param q 第一个子数组结束位置
+	 * @param r 第二个子数组结束位置
 	 */
 	private static void mergeNoFlag(Integer[] A,Integer p,Integer q,Integer r) {
 		if(p>q||q>=r)
